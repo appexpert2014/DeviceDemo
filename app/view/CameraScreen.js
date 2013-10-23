@@ -19,7 +19,6 @@ Ext.define('MyApp.view.CameraScreen', {
 
 	    requires: [
         'Ext.device.Camera',
-        'Device.view.camera.ImageList',
         'Ext.Img'
     ],
 	
