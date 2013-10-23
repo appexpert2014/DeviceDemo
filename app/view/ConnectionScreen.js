@@ -17,6 +17,10 @@ Ext.define('MyApp.view.ConnectionScreen', {
     extend: 'Ext.Container',
     alias: 'widget.connectionScreen',
 
+    requires: [
+        'Ext.device.Connection'
+    ],
+
     config: {
         items: [
             {
