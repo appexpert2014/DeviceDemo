@@ -17,6 +17,13 @@ Ext.define('MyApp.view.CameraScreen', {
     extend: 'Ext.Container',
     alias: 'widget.cameraScreen',
 
+	    requires: [
+        'Ext.device.Camera',
+        'Device.view.camera.ImageList',
+        'Ext.Img'
+    ],
+	
+	
     config: {
         items: [
             {
