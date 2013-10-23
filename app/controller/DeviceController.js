@@ -89,17 +89,13 @@ Ext.define('MyApp.controller.DeviceController', {
 
     onFromCameraButTap: function(button, e, eOpts) {
         Ext.device.Camera.capture({
-        
             success: function(image) {
-              //  imageView.setSrc(image);
-                  var imgSrc = 'data:image/jpeg;base64,'.concat(image);
-                  var imageView = Ext.getCmp('testImg');
-                 imageView.setSrc(imgSrc);
+                var imageView = Ext.getCmp('testImg');
+                 imageView.setSrc(image);
             },
             quality: 75,
             width: 200,
             height: 200,
-            source: 'camera',
             destination: 'data'
         });
     },
