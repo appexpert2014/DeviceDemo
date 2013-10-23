@@ -134,7 +134,20 @@
             "userConfig": {
                 "fn": "onFromCameraButTap",
                 "implHandler": [
-                    ""
+                    "Ext.device.Camera.capture({\r",
+                    "    \r",
+                    "    success: function(image) {\r",
+                    "      //  imageView.setSrc(image);\r",
+                    "          var imgSrc = 'data:image/jpeg;base64,'.concat(image);\r",
+                    "          var imageView = Ext.getCmp('testImg');\r",
+                    "         imageView.setSrc(imgSrc);\r",
+                    "    },\r",
+                    "    quality: 75,\r",
+                    "    width: 200,\r",
+                    "    height: 200,\r",
+                    "    source: 'camera',\r",
+                    "    destination: 'data'\r",
+                    "});"
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
@@ -151,6 +164,22 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onFromFileButTap",
+                "implHandler": [
+                    "Ext.device.Camera.capture({\r",
+                    "    \r",
+                    "    success: function(image) {\r",
+                    "        //  var imgSrc = 'data:image/jpeg;base64,'.concat(image);\r",
+                    "          var imageView = Ext.getCmp('testImg');\r",
+                    "         imageView.setSrc(image);\r",
+                    "        \r",
+                    "    },\r",
+                    "    quality: 75,\r",
+                    "    width: 200,\r",
+                    "    height: 200,\r",
+                    "    source: 'library',\r",
+                    "    destination: 'file'\r",
+                    "});"
+                ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#fromFileBut"
